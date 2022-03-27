@@ -18,3 +18,6 @@ indent_size == 4
 # Use 2 spaces for the HTML files
 [*.{html, js, css, scss, yml, jinja2, json}]
 indent_size = 2
+
+
+
