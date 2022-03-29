@@ -53,7 +53,7 @@ HINT: Beware... JS default is "Lexical" ordering.
 
 const sortNumbers = (arr) => {
   // Solution code here...
-  return arr.stort((a, b) => a - b);
+  return arr.sort((a, b) => a - b);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,11 +63,8 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 
 HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
-
-const sortBackwards = (arr) => {
-  // Solution code here...
-  return.arr.sort((a, b) b - a);
-};
+// worked with Josh!! :)
+const sortBackwards = (arr) => arr.sort((a, b) => b - a);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -99,7 +96,7 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
-  return arr.stort((a,b)=> { return a.price = b.price });
+  return arr.sort((a,b)=> { return a.price - b.price; });
 };
 
 /* ------------------------------------------------------------------------------------------------
