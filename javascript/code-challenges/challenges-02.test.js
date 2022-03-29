@@ -32,7 +32,7 @@ const addOne = (arr) => {
   // Solution code here...
   let arr2 = arrp[];
   arr.forEach(num => {
-    let val = num +1;
+    let val = num + 1;
     arr2.push(val);
   });
   return arr2;
@@ -47,7 +47,7 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 const addQuestion = (arr) => {
   // Solution code here...
   let arr2 = [];
-  arr,forEach(num => {
+  arr, forEach(num => {
     let val = num + '?';
     arr2.push(val);
   });
@@ -68,7 +68,7 @@ const forLoopTwoToThe = (arr) => {
   // Solution code here...
 };
 let arr2 = [];
-for(const num of arr){
+for (const num of arr) {
   arr2.push(Math.pow(2, num));
 }
 return arr2;
@@ -98,7 +98,7 @@ const mapTwoToThe = (arr) => {
   // Solution code here...
 };
 let arr2 = [];
-arr.map((num)=>{
+arr.map((num) => {
   arr2.push(Math.pow(2, num));
 });
 return arr2;
