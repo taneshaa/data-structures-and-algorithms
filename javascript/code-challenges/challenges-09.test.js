@@ -27,185 +27,182 @@ const courseInfo = {
 };
 
 const getCourseKeys = (obj) => {
+  // let obj2 = [];
+  return Object.getOwnPropertyNames(obj);
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 3
+
+Write a function named checkValues that takes in an object and a value and returns true if the value is in the object.
+
+
+------------------------------------------------------------------------------------------------ */
+
+const checkValues = (obj, value) => {
   // Solution code here...
-  const getCourseKeys = (obj) => {
-    // Solution code here...
-    let obj2 = [];
-    return Object.getOwnPropertyNames(obj);
-  };
-
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 3
-  
-  Write a function named checkValues that takes in an object and a value and returns true if the value is in the object.
-  
-  
-  ------------------------------------------------------------------------------------------------ */
-
-  const checkValues = (obj, value) => {
-    // Solution code here...
-    let props = Object.getOwnPropertyNames(obj);
-    for (let i = 0; i < props.length; i++) {
-      let val = obj[props[i]];
-      if (val === value) {
-        return true;
-      }
+  let props = Object.getOwnPropertyNames(obj);
+  for (let i = 0; i < props.length; i++) {
+    let val = obj[props[i]];
+    if (val === value) {
+      return true;
     }
-    return false;
-  };
-
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 4
-  
-  You are given an object with names and their coresponding phone numbers that looks like this:
-  {
-    'Grace Hopper': '222-303-5938',
-    'Ada Lovelace': '222-349-9842',
-    'Alan Turing': '222-853-5933'
   }
-  
-  HR has asked you to change the data to make it easier to print so that it looks like this:
-  [
-    'Grace Hopper: 222-303-5938',
-    'Ada Lovelace: 222-349-9842',
-    'Alan Turing: 222-853-5933'
-  ]
-  
-  ------------------------------------------------------------------------------------------------ */
+  return false;
+};
 
-  const updateNumbers = (obj) => {
-    // Solution code here...
-    let arr = [];
-    let props = Object.getOwnPropertyNames(obj);
-    props.map((prop) => {
-      arr.push(`${prop}: ${obj[prop]}`);
-    });
-    return arr;
-  };
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 4
+
+You are given an object with names and their coresponding phone numbers that looks like this:
+{
+  'Grace Hopper': '222-303-5938',
+  'Ada Lovelace': '222-349-9842',
+  'Alan Turing': '222-853-5933'
+}
+
+HR has asked you to change the data to make it easier to print so that it looks like this:
+[
+  'Grace Hopper: 222-303-5938',
+  'Ada Lovelace: 222-349-9842',
+  'Alan Turing: 222-853-5933'
+]
+
+------------------------------------------------------------------------------------------------ */
+
+const updateNumbers = (obj) => {
+  // Solution code here...
+  let arr = [];
+  let props = Object.getOwnPropertyNames(obj);
+  props.map((prop) => {
+    arr.push(`${prop}: ${obj[prop]}`);
+  });
+  return arr;
+};
 
 
 
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 5
-  
-  Write a function named getHouses that returns a new array containing the names of all of the houses in the data set.
-  ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 5
 
-  const characters = [
-    {
-      name: 'Eddard',
-      spouse: 'Catelyn',
-      children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
-      house: 'Stark',
-    },
-    {
-      name: 'Jon',
-      spouse: 'Lysa',
-      children: ['Robin'],
-      house: 'Arryn',
-    },
-    {
-      name: 'Cersei',
-      spouse: 'Robert',
-      children: ['Joffrey', 'Myrcella', 'Tommen'],
-      house: 'Lannister',
-    },
-    {
-      name: 'Daenarys',
-      spouse: 'Khal Drogo',
-      children: ['Drogon', 'Rhaegal', 'Viserion'],
-      house: 'Targaryen',
-    },
-    {
-      name: 'Mace',
-      spouse: 'Alerie',
-      children: ['Margaery', 'Loras'],
-      house: 'Tyrell',
-    },
-    {
-      name: 'Sansa',
-      spouse: 'Tyrion',
-      house: 'Stark',
-    },
-    {
-      name: 'Jon',
-      spouse: null,
-      house: 'Snow',
-    },
-  ];
+Write a function named getHouses that returns a new array containing the names of all of the houses in the data set.
+------------------------------------------------------------------------------------------------ */
 
-  const getHouses = (arr) => {
-    let houses = [];
-    // Solution code here...
-    arr.map((item) => {
-      houses.push(item.house);
-    });
-    return houses;
-  };
+const characters = [
+  {
+    name: 'Eddard',
+    spouse: 'Catelyn',
+    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+    house: 'Stark',
+  },
+  {
+    name: 'Jon',
+    spouse: 'Lysa',
+    children: ['Robin'],
+    house: 'Arryn',
+  },
+  {
+    name: 'Cersei',
+    spouse: 'Robert',
+    children: ['Joffrey', 'Myrcella', 'Tommen'],
+    house: 'Lannister',
+  },
+  {
+    name: 'Daenarys',
+    spouse: 'Khal Drogo',
+    children: ['Drogon', 'Rhaegal', 'Viserion'],
+    house: 'Targaryen',
+  },
+  {
+    name: 'Mace',
+    spouse: 'Alerie',
+    children: ['Margaery', 'Loras'],
+    house: 'Tyrell',
+  },
+  {
+    name: 'Sansa',
+    spouse: 'Tyrion',
+    house: 'Stark',
+  },
+  {
+    name: 'Jon',
+    spouse: null,
+    house: 'Snow',
+  },
+];
 
-  /*------------------------------------------------------------------------------------------------
-  CHALLENGE 6
-  
-  Write a function named hasChildrenValues that uses Object.values to determine if any given character in the data set has children.
-  
-  This function should take in an array of data and a character name and return a Boolean.
-  
-  For example:
-  hasChildrenValues(characters, 'Cersei') will return true
-  hasChildrenValues(characters, 'Sansa') will return false
-  ------------------------------------------------------------------------------------------------ */
+const getHouses = (arr) => {
+  let houses = [];
+  // Solution code here...
+  arr.map((item) => {
+    houses.push(item.house);
+  });
+  return houses;
+};
 
-  const hasChildrenValues = (arr, character) => {
-    // Solution code here...
-    let hasChildren = false;
-    arr.map((person) => {
-      if (person.name === character && person.children !== undefined){
-        hasChildren = true;
-      }
-    });
-    return hasChildren;
+/*------------------------------------------------------------------------------------------------
+CHALLENGE 6
 
-  };
+Write a function named hasChildrenValues that uses Object.values to determine if any given character in the data set has children.
 
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 7 - Stretch Goal
-  
-  Write a function named hasChildrenEntries that is similar to your hasChildrenValues function from challenge 4, but uses the data's entries instead of its values.
-  
-  The input and output of this function are the same as the input and output from challenge 3.
-  ------------------------------------------------------------------------------------------------ */
+This function should take in an array of data and a character name and return a Boolean.
 
-  const hasChildrenEntries = (arr, character) => {
-    // Solution code here...
-  };
+For example:
+hasChildrenValues(characters, 'Cersei') will return true
+hasChildrenValues(characters, 'Sansa') will return false
+------------------------------------------------------------------------------------------------ */
 
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 8 - Stretch Goal
-  
-  Write a function named totalCharacters that takes in an array and returns the number of characters in the array.
-  ------------------------------------------------------------------------------------------------ */
+const hasChildrenValues = (arr, character) => {
+  // Solution code here...
+  let hasChildren = false;
+  arr.map((person) => {
+    if (person.name === character && person.children !== undefined){
+      hasChildren = true;
+    }
+  });
+  return hasChildren;
 
-  const totalCharacters = (arr) => {
-    // Solution code here...
-  };
+};
 
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 9 - Stretch Goal
-  
-  Write a function named houseSize that takes in the array of characters and creates an object for each house containing the name of the house and the number of members.
-  
-  All of these objects should be added to an array named "sizes". Return the "sizes" array from the function.
-  
-  For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ... ].
-  ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 7 - Stretch Goal
 
-  const houseSize = (arr) => {
-    const sizes = [];
-    // Solution code here...
-    return sizes;
-  };
+Write a function named hasChildrenEntries that is similar to your hasChildrenValues function from challenge 4, but uses the data's entries instead of its values.
 
-  /* ------------------------------------------------------------------------------------------------
+The input and output of this function are the same as the input and output from challenge 3.
+------------------------------------------------------------------------------------------------ */
+
+const hasChildrenEntries = (arr, character) => {
+  // Solution code here...
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 8 - Stretch Goal
+
+Write a function named totalCharacters that takes in an array and returns the number of characters in the array.
+------------------------------------------------------------------------------------------------ */
+
+const totalCharacters = (arr) => {
+  // Solution code here...
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 9 - Stretch Goal
+
+Write a function named houseSize that takes in the array of characters and creates an object for each house containing the name of the house and the number of members.
+
+All of these objects should be added to an array named "sizes". Return the "sizes" array from the function.
+
+For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ... ].
+------------------------------------------------------------------------------------------------ */
+
+const houseSize = (arr) => {
+  const sizes = [];
+  // Solution code here...
+  return sizes;
+};
+
+/* ------------------------------------------------------------------------------------------------
   CHALLENGE 10 - Stretch Goal
   
   As fans are well aware, "When you play the game of thrones, you win or you die. There is no middle ground."
