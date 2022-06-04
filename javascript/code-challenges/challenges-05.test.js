@@ -15,7 +15,7 @@ const toLastNames = people => {
   // Solution code here...
   let arr2 = [];
   people.map((person)=> {
-    arr2.push(`${person.firstname} ${person.lastname}`);
+    arr2.push(`${person.firstName} ${person.lastName}`);
   });
   return arr2;
 };

@@ -8,8 +8,15 @@ Write a function named returnTen, takes in a string and uses split and splice to
 ------------------------------------------------------------------------------------------------ */
 // .split and .splice
 
+
 function returnTen(str) {
   return str.split('').splice(str.length - 10)
+=======
+function returnTen(str) {
+  let slicedString = src.slice(-10);
+  let string = str.split('');
+  return arr;
+
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,6 +33,7 @@ For example:
 
 return: 23
 ------------------------------------------------------------------------------------------------ */
+
 // const findMax = (matrix) => {
 //   // Solution code here...
 //   let max = 0
@@ -174,6 +182,102 @@ const salesData = (hours, data) => {
     })
   })
   return salesOverview;
+=======
+const findMax = (matrix) => {
+  // Solution code here...
+  let max = 0
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      let min = matrix[i][j];
+      if (min > max) {
+        max = min;
+      }
+    }
+    return max;
+  };
+
+  /* ------------------------------------------------------------------------------------------------
+  CHALLENGE 3
+  
+  Write a function named totalSum that takes in a matrix of numbers and returns the totalSum of all the numbers.
+  
+  For example:
+  [
+    [1, 3, 4, 5],
+    [4, 5, 1],
+    [2, 5, 5]
+  ]
+  
+  return: 35
+  ------------------------------------------------------------------------------------------------ */
+  const totalSum = (matrix) => {
+    // Solution code here...
+    let sum = 0;
+    for (let i = 0; i < matrix.length; i++) {
+      for (let j = 0; j < matrix[i].length; j++) {
+        sum += matrix[i][j];
+      }
+    } return sum;
+  };
+
+
+  /* ------------------------------------------------------------------------------------------------
+  CHALLENGE 4
+  
+  You friend Pat has a chain of stores around the greater Seattle area. He specializes in selling salmon cookies. Pat has data for the hourly sales of cookies per hour for each store. He wants to create an array of the total number of cookies sold per hour for all of his stores combined.
+  
+  Write a function named grandTotal that adds up the cookies sales for each hour of operation for all of the stores combined. For example, the first element in the hourlySales array should be the sum of the cookies sold in the 9:00 a.m. hour at all five stores combined.
+  
+  For this example, the total at 9:00 a.m. is 17 + 26 + 7 + 5 + 33, or 88 total cookies.
+  
+  Return the array of the total number of cookies sold per hour for all of the stores combined.
+  ------------------------------------------------------------------------------------------------ */
+
+  const hoursOpen = ['9 a.m.', '10 a.m.', '11 a.m.', '12 p.m.', '1 p.m.', '2 p.m.', '3 p.m.', '4 p.m.', '5 p.m.', '6 p.m.', '7 p.m.', '8 p.m.'];
+
+  const firstPike = [17, 18, 23, 24, 24, 12, 13, 27, 30, 20, 24, 18];
+  const seaTac = [26, 5, 5, 59, 23, 39, 38, 20, 30, 7, 59, 43];
+  const seattleCenter = [7, 14, 19, 22, 15, 4, 23, 27, 28, 23, 1, 29];
+  const capHill = [5, 85, 58, 51, 50, 13, 33, 32, 47, 94, 31, 62];
+  const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
+
+  const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
+
+  const grandTotal = (stores) => {
+    // Solution code here...
+    const newArr = [];
+    stores.forEach(sale => {
+      sale.forEach((num, i) => {
+        if (newArr[i]) {
+          newArr[i] += num;
+        } else {
+          newArr[i] = num;
+        }
+      });
+    });
+    return newArr;
+  };
+
+  /* ------------------------------------------------------------------------------------------------
+  CHALLENGE 5
+  
+  Pat has decided that he would also like to organize his data as objects containing the number of cookies sold per hour and the time.
+  
+  Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
+  
+  Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
+  ------------------------------------------------------------------------------------------------ */
+
+  const salesData = (hours, data) => {
+    // Solution code here...
+    const newArr = [];
+    data.forEach((brentspiner, time) => {
+      let currObj = { 'sales': `${brentspiner} cookies`, 'time': `${hours[time]}` };
+      newArr.push(currObj);
+    }
+  });
+  return newArr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -198,6 +302,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => arr[2].items[1].quantity;
+
 // Solution code here...
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7 - Stretch Goal
@@ -216,6 +321,27 @@ const howManyTreats = (arr) => arr[2].items[1].quantity;
 
 // The top row of the board is considered row zero and row numbers increase as they go down.
 // ------------------------------------------------------------------------------------------------ */
+=======
+  // Solution code here...
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 7 - Stretch Goal
+ 
+Write a function named battleship that accepts a 2D array and two numbers: a row coordinate and a column coordinate.
+ 
+Return "hit" or "miss" depending on if there's part of a boat at that position in the array. Assume the array has only one of two values at each index. '#' for part of a boat, or ' ' for open water.
+ 
+Here is a sample board:
+[
+  ['#', ' ', '#', ' '],
+  ['#', ' ', '#', ' '],
+  ['#', ' ', ' ', ' '],
+  [' ', ' ', '#', '#'],
+]
+ 
+The top row of the board is considered row zero and row numbers increase as they go down.
+------------------------------------------------------------------------------------------------ */
+
 
 const battleship = (board, row, col) => {
   //  Solution code here...
