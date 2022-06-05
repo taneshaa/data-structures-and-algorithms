@@ -20,7 +20,7 @@ Becomes:
 
 function transformToLis(obj) {
   // Solution code here...
-  return Object.kets(obj).map(key => {
+  return Object.keys(obj).map(key => {
     return (
       `<li>${key}: ${obj[key]}</li>`
     );
@@ -149,7 +149,7 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
-  return data.filter(characterObject => characterObject.gener === 'male' || characterObject.gender === 'female').map(character => character.name).join(' and ');
+  return data.filter(characterObject => characterObject.gender === 'male' || characterObject.gender === 'female').map(character => character.name).join(' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
