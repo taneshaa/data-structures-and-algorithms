@@ -11,7 +11,7 @@ const longestString = (arr) => {
   let currentLongestStr = { string: '', index: -1 };
 
   arr.forEach((str, idx) => {
-    str.length > currentLongestStr.string.length ? currentLongestStr = { string: str, indez: idx } : '';
+    str.length > currentLongestStr.string.length ? currentLongestStr = { string: str, index: idx } : '';
   });
   return currentLongestStr.index;
 };
@@ -26,6 +26,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
+  return arr.map(str => str.charAt(0));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,6 +39,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  return arr.filter(str => str.includes(':)'));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,6 +52,7 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  return arr.map(num => `${num.substring(1, 4)}${num.substring(6, 9)}${num.substring(10)}`);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,7 +76,7 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
-  return arr.every(str => str.includies(':)'));
+  return arr.every(str => str.includes(':)'));
 };
 
 /* ------------------------------------------------------------------------------------------------
