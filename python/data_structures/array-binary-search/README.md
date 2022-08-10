@@ -6,7 +6,7 @@ Don't utilize and built-in methods
 Return index of the arrays element that is equal to the value of the search key, or -1 if the element is not the array
 
 ## Whiteboard Process
-Photo will be added later
+![White Board](./array-binary-search.png)
 
 ## Approach & Efficiency
 Worked with Brandon M

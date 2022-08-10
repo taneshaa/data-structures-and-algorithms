@@ -2,7 +2,7 @@
 customer wants to add an item in the middle of a list
 
 ## Whiteboard Process
-cant import images, working with brandon on this, also worked with kassie
+![White Board](./array-insert-shift.png)
 
 ## Approach & Efficiency
 Worked with Brandon M
