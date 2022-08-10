@@ -8,8 +8,7 @@ Write a function named returnTen, takes in a string and uses split and splice to
 ------------------------------------------------------------------------------------------------ */
 // .split and .splice
 
-function returnTen(str) {
-  return str.split('').splice(str.length - 10)
+
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,6 +25,7 @@ For example:
 
 return: 23
 ------------------------------------------------------------------------------------------------ */
+
 // const findMax = (matrix) => {
 //   // Solution code here...
 //   let max = 0
@@ -174,6 +174,7 @@ const salesData = (hours, data) => {
     })
   })
   return salesOverview;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -198,6 +199,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => arr[2].items[1].quantity;
+
 // Solution code here...
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7 - Stretch Goal
@@ -216,6 +218,7 @@ const howManyTreats = (arr) => arr[2].items[1].quantity;
 
 // The top row of the board is considered row zero and row numbers increase as they go down.
 // ------------------------------------------------------------------------------------------------ */
+
 
 const battleship = (board, row, col) => {
   //  Solution code here...
