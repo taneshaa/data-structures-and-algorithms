@@ -4,7 +4,7 @@ Write three methods for Linked List Class: append, insert before, and insert aft
 
 ## Whiteboard Process
 
-![Whiteboard: Class 6](codeChall06Whiteboard)
+![Whiteboard: Class 6](./codeChall06Whiteboard.jpg)
 
 ## Approach & Efficiency
 
