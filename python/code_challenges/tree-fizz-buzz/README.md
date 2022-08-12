@@ -7,7 +7,7 @@
 
 ## Overview
 
-MadLIb, allows the user to play a madlib game. The game will prompt the user to enter different words of different parts of speech. The output is the result of all the words tied together to formulate a creative story.
+Conduct "FizzBuzz" on a k-ary tree while traversing through it to create a new tree
 
 ## Architecture
 
@@ -15,6 +15,7 @@ Python
 Miro
 
 ## Estimates
+2 hours
 
 ### Lab 3
 
